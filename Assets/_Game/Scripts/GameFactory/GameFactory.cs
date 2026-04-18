@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Pool;
 using System.Collections.Generic;
+using Dreamteck.Splines;
 
 public class GameFactory : MonoBehaviour
 {
@@ -66,7 +67,7 @@ public class GameFactory : MonoBehaviour
         float lateralOffset = Vector3.Dot(delta, sample.right);
         float verticalOffset = Vector3.Dot(delta, sample.up);
         mover.Init(spline, sample.percent, lateralOffset, verticalOffset);
-        RegisterMob(mob);
+        // RegisterMob(mob);
         return mob;
     }
 

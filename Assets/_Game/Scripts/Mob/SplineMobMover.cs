@@ -16,6 +16,7 @@ public class SplineMobMover : MonoBehaviour
     {
         _follower.follow = false;
         _follower.spline = spline;
+        _follower.RebuildImmediate();
         _follower.motion.offset = new Vector2(lateralOffset, verticalOffset);
         _follower.preserveUniformSpeedWithOffset = true;
         _follower.SetPercent(startPercent);

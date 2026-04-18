@@ -56,7 +56,7 @@ public class MobEntity : MonoBehaviour
     {
         transform.DOKill();
         var seq = DOTween.Sequence().SetLink(gameObject);
-        seq.Join(transform.DOLocalRotate(new Vector3(90f, 0f, 0f), mobEntityConfig.DieRotationDuration,
+        seq.Join(transform.DOLocalRotate(new Vector3(-90f, 0f, 0f), mobEntityConfig.DieRotationDuration,
          RotateMode.LocalAxisAdd)
             .SetEase(Ease.OutQuad));
         seq.Join(transform.DOMoveY(transform.position.y - 1f, mobEntityConfig.DieMoveDownDuration)
