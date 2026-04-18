@@ -9,6 +9,9 @@ public class MobEntity : MonoBehaviour
     public MobTeam Team { get; private set; }
     public bool IsAlive { get; private set; }
 
+    /// <summary>Увеличивается при каждом выдаче из пула — чтобы ворота и триггеры не срабатывали повторно на одном «проходе».</summary>
+    public int SpawnSession { get; private set; }
+
     [SerializeField] private Renderer meshRenderer;
 
     private bool _isDying;
@@ -26,6 +29,7 @@ public class MobEntity : MonoBehaviour
 
     public void OnSpawned(MobTeam team)
     {
+        SpawnSession++;
         Team      = team;
         IsAlive   = true;
         _isDying  = false;

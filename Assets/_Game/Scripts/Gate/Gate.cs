@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 using Dreamteck.Splines;
 using TMPro;
@@ -7,6 +9,7 @@ public class Gate : MonoBehaviour
     [SerializeField] private GateConfig gateConfig;
     [SerializeField] private TextMeshPro multText;
 
+    private readonly Dictionary<MobEntity, int> _processedMobSession = new(32);
 
     public void Start()
     {
@@ -26,18 +29,25 @@ public class Gate : MonoBehaviour
         if (!mob.TryGetComponent<SplineMobMover>(out var sourceMover))
             return;
 
-        SplineComputer spline = sourceMover.CurrentSpline;
-        double percent = sourceMover.CurrentPercent;
-        percent = spline.Travel(percent, gateConfig.AdvanceAlongSplineDistance, Spline.Direction.Forward);
-        SplineSample sample = spline.Evaluate(percent);
+        int session = mob.SpawnSession;
+        if (_processedMobSession.TryGetValue(mob, out int recorded) && recorded == session)
+            return;
+        _processedMobSession[mob] = session;
 
-        for (int i = 0; i < gateConfig.Mult; i++)
+        SplineComputer spline = sourceMover.CurrentSpline;
+        double mobPercent = sourceMover.CurrentPercent;
+        SplineSample sampleAtMob = spline.Evaluate(mobPercent);
+        var count = gateConfig.Mult - 1;
+        for (int i = 0; i < count; i++)
         {
             float lateral = (i - (gateConfig.Mult - 1) * 0.5f) * gateConfig.LateralSpacing;
-            Vector3 spawnPos = sample.position + sample.right * lateral;
-            Vector3 spawnPosY = new Vector3(spawnPos.x, mob.transform.position.y, spawnPos.z);
-            Quaternion spawnRot = sample.rotation;
-            GameFactory.Instance.GetPlayerMobOnSpline(spline, percent, spawnPosY, spawnRot);
+            Vector3 spawnPos = mob.transform.position
+                + sampleAtMob.forward * gateConfig.AdvanceAlongSplineDistance
+                + sampleAtMob.right * lateral;
+            spawnPos.y = mob.transform.position.y;
+
+            SplineSample projected = spline.Project(spawnPos);
+            GameFactory.Instance.GetPlayerMobOnSpline(spline, projected.percent, spawnPos, projected.rotation);
         }
     }
 }
