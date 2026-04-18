@@ -5,6 +5,7 @@ using Dreamteck.Splines;
 public class SplineMobMover : MonoBehaviour
 {
     private SplineFollower _follower;
+    private SplineComputer _spline;
 
     private void Awake()
     {
@@ -14,6 +15,7 @@ public class SplineMobMover : MonoBehaviour
 
     public void Init(SplineComputer spline, double startPercent, float lateralOffset, float verticalOffset)
     {
+        _spline = spline;
         _follower.follow = false;
         _follower.spline = spline;
         _follower.RebuildImmediate();

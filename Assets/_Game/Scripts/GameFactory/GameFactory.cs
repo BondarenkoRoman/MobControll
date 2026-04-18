@@ -45,10 +45,7 @@ public class GameFactory : MonoBehaviour
         var mover = mob.GetComponent<SplineMobMover>();
         var spline = splineSelector.GetForEnemy();
         var sample = spline.Project(position);
-        Vector3 delta = position - sample.position;
-        float lateralOffset = Vector3.Dot(delta, sample.right);
-        float verticalOffset = Vector3.Dot(delta, sample.up);
-        mover.Init(spline, sample.percent, lateralOffset, verticalOffset);
+        InitMoverFromSplineSample(mover, spline, sample, position);
 
         return mob;
     }
@@ -63,18 +60,40 @@ public class GameFactory : MonoBehaviour
         var mover = mob.GetComponent<SplineMobMover>();
         var spline = splineSelector.GetClosestForPlayer(position);
         var sample = spline.Project(position);
-        Vector3 delta = position - sample.position;
-        float lateralOffset = Vector3.Dot(delta, sample.right);
-        float verticalOffset = Vector3.Dot(delta, sample.up);
-        mover.Init(spline, sample.percent, lateralOffset, verticalOffset);
+        InitMoverFromSplineSample(mover, spline, sample, position);
         // RegisterMob(mob);
         return mob;
     }
+
+    public MobEntity GetPlayerMobOnSpline(SplineComputer spline, double splinePercent, Vector3 position, Quaternion rotation)
+    {
+        var mob = _pool.Get();
+        mob.transform.SetPositionAndRotation(position, rotation);
+        mob.OnSpawned(MobTeam.Player);
+        mob.SetColor(Color.cyan);
+
+        var mover = mob.GetComponent<SplineMobMover>();
+        var sample = spline.Evaluate(splinePercent);
+        InitMoverFromSplineSample(mover, spline, sample, position, splinePercent);
+
+        return mob;
+    }
+
+    
 
     public void ReleaseMob(MobEntity mob)
     {
         if (mob == null) return;
         _pool.Release(mob);
+    }
+
+    private static void InitMoverFromSplineSample(SplineMobMover mover, SplineComputer spline, SplineSample sample, Vector3 worldPosition, double? startPercentOverride = null)
+    {
+        Vector3 delta = worldPosition - sample.position;
+        float lateralOffset = Vector3.Dot(delta, sample.right);
+        float verticalOffset = Vector3.Dot(delta, sample.up);
+        double startPercent = startPercentOverride ?? sample.percent;
+        mover.Init(spline, startPercent, lateralOffset, verticalOffset);
     }
 
     private MobEntity CreateMob()
