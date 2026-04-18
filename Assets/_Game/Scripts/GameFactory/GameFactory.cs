@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Pool;
+using System.Collections.Generic;
 
 public class GameFactory : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GameFactory : MonoBehaviour
     [SerializeField] private int maxSize = 512;
     private IObjectPool<MobEntity> _pool;
 
+    public IReadOnlyList<MobEntity> PlayerMobs => _playerMobs;
+    private readonly List<MobEntity> _playerMobs = new List<MobEntity>(500);
 
     private void Awake()
     {
@@ -63,7 +66,7 @@ public class GameFactory : MonoBehaviour
         float lateralOffset = Vector3.Dot(delta, sample.right);
         float verticalOffset = Vector3.Dot(delta, sample.up);
         mover.Init(spline, sample.percent, lateralOffset, verticalOffset);
-
+        RegisterMob(mob);
         return mob;
     }
 
@@ -87,6 +90,7 @@ public class GameFactory : MonoBehaviour
 
     private void OnReturnedToPool(MobEntity mob)
     {
+        UnregisterMob(mob);
         mob.OnDespawned();
         mob.gameObject.SetActive(false);
         mob.transform.SetParent(transform);
@@ -102,4 +106,9 @@ public class GameFactory : MonoBehaviour
     {
         _pool?.Clear();
     }
+
+
+    private void RegisterMob(MobEntity mob) => _playerMobs.Add(mob);
+
+    private void UnregisterMob(MobEntity mob) => _playerMobs.Remove(mob);
 }

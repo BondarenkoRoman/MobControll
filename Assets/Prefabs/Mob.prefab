@@ -165,7 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d5d4a6880216c4389540c962906ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseSpeed: 4
 --- !u!114 &1697008335037648934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61408776ed5e9304398793f8a0786c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mobEntityConfig: {fileID: 11400000, guid: 223dec1f62eb71741b48d1b9ee0ad3d3, type: 2}
   meshRenderer: {fileID: 3046081301928911412}
 --- !u!135 &4976079247142844727
 SphereCollider:
@@ -194,7 +194,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -302,7 +302,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0bf003a2b574b1b46986af83df5bb5e6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2404266151641709586}
+      addedObject: {fileID: 2832031111586990691}
   m_SourcePrefab: {fileID: 100100000, guid: 0bf003a2b574b1b46986af83df5bb5e6, type: 3}
 --- !u!137 &3046081301928911412 stripped
 SkinnedMeshRenderer:
@@ -314,27 +314,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0bf003a2b574b1b46986af83df5bb5e6, type: 3}
   m_PrefabInstance: {fileID: 8896455712863389338}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &2404266151641709586
-Animator:
-  serializedVersion: 5
+--- !u!111 &2832031111586990691
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8626617066821696459}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2ccf56080b00be94f8e7123131890e4a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  serializedVersion: 3
+  m_Animation: {fileID: -203655887218126122, guid: 0bf003a2b574b1b46986af83df5bb5e6, type: 3}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!4 &9006132903004529009 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0bf003a2b574b1b46986af83df5bb5e6, type: 3}

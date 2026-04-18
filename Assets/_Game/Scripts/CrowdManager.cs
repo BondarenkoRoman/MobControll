@@ -45,7 +45,7 @@ public class CrowdManager : MonoBehaviour
             // SplineFollower управляет движением сам — не вмешиваемся
             if (mob.GetComponent<SplineMobMover>() != null) continue;
 
-            mob.MoveStep(speed, dt);
+     //       mob.MoveStep(speed, dt);
         }
     }
 
