@@ -1,38 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using TMPro;
 
 public class Barrier : MonoBehaviour
 {
-    [SerializeField] private BarrierConfig BarrierConfig;
-    [SerializeField] private TextMeshPro _hpText;
     [SerializeField] private UnityEvent OnTriggerMob;
+    [SerializeField] private LayerMask collisionPayer;
 
     private readonly Dictionary<MobEntity, int> _processedMobSession = new(32);
 
-    private int _hp;
-
-    private void Awake()
-    {
-        _hp = BarrierConfig.Hp;
-        UpdateHpDisplay();
-    }
-
-    private void UpdateHpDisplay()
-    {
-        _hpText.text = _hp.ToString();
-    }
-
-    private void SetHp(int hp)
-    {
-        _hp = Mathf.Max(0, hp);
-        UpdateHpDisplay();
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.TryGetComponent<MobEntity>(out var mob))
+        if (!other.TryGetComponent<MobEntity>(out var mob) ||
+            (collisionPayer.value & (1 << other.gameObject.layer)) == 0)
             return;
 
         int session = mob.SpawnSession;
@@ -44,6 +24,5 @@ public class Barrier : MonoBehaviour
         if (mob.TryGetComponent<SplineMobMover>(out var mover))
             mover.StopFollowing();
         mob.TryKill();
-        SetHp(--_hp);
     }
 }

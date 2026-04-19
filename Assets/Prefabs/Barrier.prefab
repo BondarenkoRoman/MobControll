@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4805519608718070447}
   - component: {fileID: 5668130491397615770}
   - component: {fileID: 7436386732807092726}
+  - component: {fileID: 6112260385311987101}
   m_Layer: 0
   m_Name: Barrier
   m_TagString: Untagged
@@ -179,8 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9afa0f545f633428548e5f54cb3af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BarrierConfig: {fileID: 11400000, guid: d86fb8d2f40cfc34fbf8d94738a64950, type: 2}
-  _hpText: {fileID: 7674116601502501001}
   OnTriggerMob:
     m_PersistentCalls:
       m_Calls:
@@ -196,6 +195,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6112260385311987101}
+        m_TargetAssemblyTypeName: HitPoints, Assembly-CSharp
+        m_MethodName: ApplyDamage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  collisionPayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!54 &5668130491397615770
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -246,6 +260,38 @@ MonoBehaviour:
   _returnEase: 5
   _playOnStart: 0
   _snapping: 0
+--- !u!114 &6112260385311987101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256113715576256375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a3c8e21d904b4a9c1e56b82f0d4e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defaultMaxHp: 10
+  _onCurrentChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6112260385311987101}
+        m_TargetAssemblyTypeName: HitPoints, Assembly-CSharp
+        m_MethodName: SetHpText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onDepleted:
+    m_PersistentCalls:
+      m_Calls: []
+  _hpText: {fileID: 7674116601502501001}
 --- !u!1 &8232481104130350927
 GameObject:
   m_ObjectHideFlags: 0

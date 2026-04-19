@@ -104,7 +104,7 @@ MonoBehaviour:
     _2dMode: 0
     velocityHandleMode: 0
     applyPositionX: 1
-    applyPositionY: 1
+    applyPositionY: 0
     applyPositionZ: 1
     applyPosition2D: 1
     retainLocalPosition: 0
