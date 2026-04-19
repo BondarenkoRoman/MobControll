@@ -62,6 +62,8 @@ public class EnemyWaveGenerator : MonoBehaviour
         }
     }
 
+
+
     private void CreateEnemy(int index)
     {
         Vector3 worldPos = spawnPoint.TransformPoint(formationStrategy.GetPositionByIndex(index));
