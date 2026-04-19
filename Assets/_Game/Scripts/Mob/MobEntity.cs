@@ -44,7 +44,6 @@ public class MobEntity : MonoBehaviour
 
     public bool TryKill()
     {
-        Debug.LogError("try kill");
         if (!IsAlive || _isDying) 
             return false;
 

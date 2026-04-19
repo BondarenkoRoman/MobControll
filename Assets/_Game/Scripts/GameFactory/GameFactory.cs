@@ -96,8 +96,6 @@ public class GameFactory : MonoBehaviour
         return mob;
     }
 
-    
-
     public void ReleaseMob(MobEntity mob)
     {
         if (mob == null) return;
@@ -162,10 +160,7 @@ public class GameFactory : MonoBehaviour
     {
         int layer = LayerMask.NameToLayer(layerName);
         if (layer < 0)
-        {
-            Debug.LogWarning($"GameFactory: слой «{layerName}» не найден в Tags & Layers.");
             return;
-        }
 
         SetLayerRecursively(mob.transform, layer);
     }
