@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Collections.Generic;
 using UnityEngine;
 using Dreamteck.Splines;
 using TMPro;
@@ -8,6 +7,7 @@ public class Gate : MonoBehaviour
 {
     [SerializeField] private GateConfig gateConfig;
     [SerializeField] private TextMeshPro multText;
+    [SerializeField] private LayerMask collisionPayer;
 
     private readonly Dictionary<MobEntity, int> _processedMobSession = new(32);
 
@@ -23,7 +23,8 @@ public class Gate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.TryGetComponent<MobEntity>(out var mob))
+        if (!other.TryGetComponent<MobEntity>(out var mob) ||
+            (collisionPayer.value & (1 << other.gameObject.layer)) == 0)
             return;
 
         if (!mob.TryGetComponent<SplineMobMover>(out var sourceMover))

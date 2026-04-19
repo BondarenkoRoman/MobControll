@@ -9,7 +9,6 @@ public class MobEntity : MonoBehaviour
     public MobTeam Team { get; private set; }
     public bool IsAlive { get; private set; }
 
-    /// <summary>Увеличивается при каждом выдаче из пула — чтобы ворота и триггеры не срабатывали повторно на одном «проходе».</summary>
     public int SpawnSession { get; private set; }
 
     [SerializeField] private Renderer meshRenderer;
@@ -24,8 +23,6 @@ public class MobEntity : MonoBehaviour
         _mpb = new MaterialPropertyBlock();
         if (meshRenderer == null) meshRenderer = GetComponent<Renderer>();
     }
-
-
 
     public void OnSpawned(MobTeam team)
     {

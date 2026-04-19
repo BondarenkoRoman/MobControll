@@ -671,8 +671,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9dd24a4a41c5fd46bd7ff8952b28643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gateConfig: {fileID: 11400000, guid: abf2162d6bffe2b4d8df6e8d92c75eaa, type: 2}
+  gateConfig: {fileID: 11400000, guid: 64898a70bb040f644a84f122ed9cc9e7, type: 2}
   multText: {fileID: 606864266137415961}
+  collisionPayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &8308218555797673604
 GameObject:
   m_ObjectHideFlags: 0

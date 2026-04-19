@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1121085219134821198}
   - component: {fileID: 6429805311043660344}
   - component: {fileID: 6589792312673365938}
+  - component: {fileID: 2292911811902886493}
   m_Layer: 0
   m_Name: QcBoxSlantPanel
   m_TagString: Untagged
@@ -141,6 +142,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2292911811902886493
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816128132748324681}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.68, y: 1.2, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1052596884690225091
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +175,7 @@ GameObject:
   - component: {fileID: 5961427323695423963}
   - component: {fileID: 8262687958585654518}
   - component: {fileID: 4477100795891767250}
+  - component: {fileID: 5718052748605650393}
   m_Layer: 0
   m_Name: QcHollowCase
   m_TagString: Untagged
@@ -314,6 +337,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5718052748605650393
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052596884690225091}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.6, z: 1.4}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1082118212297799862
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +370,7 @@ GameObject:
   - component: {fileID: 6693332784134899094}
   - component: {fileID: 8782200709524236291}
   - component: {fileID: 2464028395280328672}
+  - component: {fileID: 5037313145623785422}
   m_Layer: 0
   m_Name: QcColumnTri (1)
   m_TagString: Untagged
@@ -446,6 +491,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5037313145623785422
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082118212297799862}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.35, y: 0.1, z: 1.49}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3395529061003714045
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +524,7 @@ GameObject:
   - component: {fileID: 718760352380183500}
   - component: {fileID: 7338961019008327877}
   - component: {fileID: 844409433799375966}
+  - component: {fileID: 7295992056755286952}
   m_Layer: 0
   m_Name: QcBox (1)
   m_TagString: Untagged
@@ -587,6 +654,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7295992056755286952
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3395529061003714045}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4170418819193382432
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +687,7 @@ GameObject:
   - component: {fileID: 3118846964974943397}
   - component: {fileID: 7610246399537862586}
   - component: {fileID: 8715016453179435301}
+  - component: {fileID: 1932236907318852228}
   m_Layer: 0
   m_Name: QcBoxSlantPanel (1)
   m_TagString: Untagged
@@ -728,6 +817,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1932236907318852228
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4170418819193382432}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.85, y: 1.2, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5026802078720182147
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,6 +850,7 @@ GameObject:
   - component: {fileID: 1999424771144604951}
   - component: {fileID: 1231526120743973269}
   - component: {fileID: 4485891970584587328}
+  - component: {fileID: 7469885800954857441}
   m_Layer: 0
   m_Name: QcTSection (1)
   m_TagString: Untagged
@@ -905,6 +1016,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7469885800954857441
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5026802078720182147}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 0.8}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &5423956761449678791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1220,7 @@ GameObject:
   - component: {fileID: 133700020029796820}
   - component: {fileID: 4992926271006411157}
   - component: {fileID: 3745573319117581484}
+  - component: {fileID: 5655742235465740080}
   m_Layer: 0
   m_Name: QcTSection
   m_TagString: Untagged
@@ -1253,6 +1386,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5655742235465740080
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6766200287014843361}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 0.8}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &7328350118446575040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1419,7 @@ GameObject:
   - component: {fileID: 380086892780959558}
   - component: {fileID: 5334099681667247150}
   - component: {fileID: 361795587651963722}
+  - component: {fileID: 2963461325845126180}
   m_Layer: 0
   m_Name: QcColumnOcta (1)
   m_TagString: Untagged
@@ -1281,7 +1436,7 @@ Transform:
   m_GameObject: {fileID: 7328350118446575040}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.987, z: 0.381}
+  m_LocalPosition: {x: 0, y: 3.425, z: 0.361}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1300,106 +1455,106 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vertices:
-  - {x: 0.0050000004, y: -0.69, z: 0}
-  - {x: 0.05, y: -0.69, z: 0}
-  - {x: 0.05, y: 0.69, z: 0}
-  - {x: 0.0050000004, y: 0.69, z: 0}
-  - {x: 0.05, y: -0.69, z: 0}
-  - {x: 0.05, y: 0.69, z: 0}
-  - {x: 0.0050000004, y: 0.69, z: 0}
-  - {x: 0.0050000004, y: -0.69, z: 0}
-  - {x: 0.003535534, y: -0.69, z: 0.003535534}
-  - {x: 0.03535534, y: -0.69, z: 0.03535534}
-  - {x: 0.03535534, y: 0.69, z: 0.03535534}
-  - {x: 0.003535534, y: 0.69, z: 0.003535534}
-  - {x: 0.03535534, y: -0.69, z: 0.03535534}
-  - {x: 0.03535534, y: 0.69, z: 0.03535534}
-  - {x: 0.003535534, y: 0.69, z: 0.003535534}
-  - {x: 0.003535534, y: -0.69, z: 0.003535534}
-  - {x: 0.03535534, y: -0.69, z: 0.03535534}
-  - {x: 0.03535534, y: 0.69, z: 0.03535534}
-  - {x: 0.003535534, y: 0.69, z: 0.003535534}
-  - {x: 0.003535534, y: -0.69, z: 0.003535534}
-  - {x: -2.1855695e-10, y: -0.69, z: 0.0050000004}
-  - {x: -0.0000000021855695, y: -0.69, z: 0.05}
-  - {x: -0.0000000021855695, y: 0.69, z: 0.05}
-  - {x: -2.1855695e-10, y: 0.69, z: 0.0050000004}
-  - {x: -0.0000000021855695, y: -0.69, z: 0.05}
-  - {x: -0.0000000021855695, y: 0.69, z: 0.05}
-  - {x: -2.1855695e-10, y: 0.69, z: 0.0050000004}
-  - {x: -2.1855695e-10, y: -0.69, z: 0.0050000004}
-  - {x: -0.0000000021855695, y: -0.69, z: 0.05}
-  - {x: -0.0000000021855695, y: 0.69, z: 0.05}
-  - {x: -2.1855695e-10, y: 0.69, z: 0.0050000004}
-  - {x: -2.1855695e-10, y: -0.69, z: 0.0050000004}
-  - {x: -0.003535534, y: -0.69, z: 0.003535534}
-  - {x: -0.03535534, y: -0.69, z: 0.03535534}
-  - {x: -0.03535534, y: 0.69, z: 0.03535534}
-  - {x: -0.003535534, y: 0.69, z: 0.003535534}
-  - {x: -0.03535534, y: -0.69, z: 0.03535534}
-  - {x: -0.03535534, y: 0.69, z: 0.03535534}
-  - {x: -0.003535534, y: 0.69, z: 0.003535534}
-  - {x: -0.003535534, y: -0.69, z: 0.003535534}
-  - {x: -0.03535534, y: -0.69, z: 0.03535534}
-  - {x: -0.03535534, y: 0.69, z: 0.03535534}
-  - {x: -0.003535534, y: 0.69, z: 0.003535534}
-  - {x: -0.003535534, y: -0.69, z: 0.003535534}
-  - {x: -0.0050000004, y: -0.69, z: -4.371139e-10}
-  - {x: -0.05, y: -0.69, z: -0.000000004371139}
-  - {x: -0.05, y: 0.69, z: -0.000000004371139}
-  - {x: -0.0050000004, y: 0.69, z: -4.371139e-10}
-  - {x: -0.05, y: -0.69, z: -0.000000004371139}
-  - {x: -0.05, y: 0.69, z: -0.000000004371139}
-  - {x: -0.0050000004, y: 0.69, z: -4.371139e-10}
-  - {x: -0.0050000004, y: -0.69, z: -4.371139e-10}
-  - {x: -0.05, y: -0.69, z: -0.000000004371139}
-  - {x: -0.05, y: 0.69, z: -0.000000004371139}
-  - {x: -0.0050000004, y: 0.69, z: -4.371139e-10}
-  - {x: -0.0050000004, y: -0.69, z: -4.371139e-10}
-  - {x: -0.0035355333, y: -0.69, z: -0.0035355345}
-  - {x: -0.035355333, y: -0.69, z: -0.035355344}
-  - {x: -0.035355333, y: 0.69, z: -0.035355344}
-  - {x: -0.0035355333, y: 0.69, z: -0.0035355345}
-  - {x: -0.035355333, y: -0.69, z: -0.035355344}
-  - {x: -0.035355333, y: 0.69, z: -0.035355344}
-  - {x: -0.0035355333, y: 0.69, z: -0.0035355345}
-  - {x: -0.0035355333, y: -0.69, z: -0.0035355345}
-  - {x: -0.035355333, y: -0.69, z: -0.035355344}
-  - {x: -0.035355333, y: 0.69, z: -0.035355344}
-  - {x: -0.0035355333, y: 0.69, z: -0.0035355345}
-  - {x: -0.0035355333, y: -0.69, z: -0.0035355345}
-  - {x: 5.96244e-11, y: -0.69, z: -0.0050000004}
-  - {x: 5.9624405e-10, y: -0.69, z: -0.05}
-  - {x: 5.9624405e-10, y: 0.69, z: -0.05}
-  - {x: 5.96244e-11, y: 0.69, z: -0.0050000004}
-  - {x: 5.9624405e-10, y: -0.69, z: -0.05}
-  - {x: 5.9624405e-10, y: 0.69, z: -0.05}
-  - {x: 5.96244e-11, y: 0.69, z: -0.0050000004}
-  - {x: 5.96244e-11, y: -0.69, z: -0.0050000004}
-  - {x: 5.9624405e-10, y: -0.69, z: -0.05}
-  - {x: 5.9624405e-10, y: 0.69, z: -0.05}
-  - {x: 5.96244e-11, y: 0.69, z: -0.0050000004}
-  - {x: 5.96244e-11, y: -0.69, z: -0.0050000004}
-  - {x: 0.0035355352, y: -0.69, z: -0.0035355329}
-  - {x: 0.035355352, y: -0.69, z: -0.035355326}
-  - {x: 0.035355352, y: 0.69, z: -0.035355326}
-  - {x: 0.0035355352, y: 0.69, z: -0.0035355329}
-  - {x: 0.035355352, y: -0.69, z: -0.035355326}
-  - {x: 0.035355352, y: 0.69, z: -0.035355326}
-  - {x: 0.0035355352, y: 0.69, z: -0.0035355329}
-  - {x: 0.0035355352, y: -0.69, z: -0.0035355329}
-  - {x: 0.035355352, y: -0.69, z: -0.035355326}
-  - {x: 0.035355352, y: 0.69, z: -0.035355326}
-  - {x: 0.0035355352, y: 0.69, z: -0.0035355329}
-  - {x: 0.0035355352, y: -0.69, z: -0.0035355329}
-  - {x: 0.0050000004, y: -0.69, z: 8.742278e-10}
-  - {x: 0.05, y: -0.69, z: 0.000000008742278}
-  - {x: 0.05, y: 0.69, z: 0.000000008742278}
-  - {x: 0.0050000004, y: 0.69, z: 8.742278e-10}
-  - {x: 0.05, y: -0.69, z: 0.000000008742278}
-  - {x: 0.05, y: 0.69, z: 0.000000008742278}
-  - {x: 0.0050000004, y: 0.69, z: 8.742278e-10}
-  - {x: 0.0050000004, y: -0.69, z: 8.742278e-10}
+  - {x: 0.0050000004, y: -0.93, z: 0}
+  - {x: 0.05, y: -0.93, z: 0}
+  - {x: 0.05, y: 0.93, z: 0}
+  - {x: 0.0050000004, y: 0.93, z: 0}
+  - {x: 0.05, y: -0.93, z: 0}
+  - {x: 0.05, y: 0.93, z: 0}
+  - {x: 0.0050000004, y: 0.93, z: 0}
+  - {x: 0.0050000004, y: -0.93, z: 0}
+  - {x: 0.003535534, y: -0.93, z: 0.003535534}
+  - {x: 0.03535534, y: -0.93, z: 0.03535534}
+  - {x: 0.03535534, y: 0.93, z: 0.03535534}
+  - {x: 0.003535534, y: 0.93, z: 0.003535534}
+  - {x: 0.03535534, y: -0.93, z: 0.03535534}
+  - {x: 0.03535534, y: 0.93, z: 0.03535534}
+  - {x: 0.003535534, y: 0.93, z: 0.003535534}
+  - {x: 0.003535534, y: -0.93, z: 0.003535534}
+  - {x: 0.03535534, y: -0.93, z: 0.03535534}
+  - {x: 0.03535534, y: 0.93, z: 0.03535534}
+  - {x: 0.003535534, y: 0.93, z: 0.003535534}
+  - {x: 0.003535534, y: -0.93, z: 0.003535534}
+  - {x: -2.1855695e-10, y: -0.93, z: 0.0050000004}
+  - {x: -0.0000000021855695, y: -0.93, z: 0.05}
+  - {x: -0.0000000021855695, y: 0.93, z: 0.05}
+  - {x: -2.1855695e-10, y: 0.93, z: 0.0050000004}
+  - {x: -0.0000000021855695, y: -0.93, z: 0.05}
+  - {x: -0.0000000021855695, y: 0.93, z: 0.05}
+  - {x: -2.1855695e-10, y: 0.93, z: 0.0050000004}
+  - {x: -2.1855695e-10, y: -0.93, z: 0.0050000004}
+  - {x: -0.0000000021855695, y: -0.93, z: 0.05}
+  - {x: -0.0000000021855695, y: 0.93, z: 0.05}
+  - {x: -2.1855695e-10, y: 0.93, z: 0.0050000004}
+  - {x: -2.1855695e-10, y: -0.93, z: 0.0050000004}
+  - {x: -0.003535534, y: -0.93, z: 0.003535534}
+  - {x: -0.03535534, y: -0.93, z: 0.03535534}
+  - {x: -0.03535534, y: 0.93, z: 0.03535534}
+  - {x: -0.003535534, y: 0.93, z: 0.003535534}
+  - {x: -0.03535534, y: -0.93, z: 0.03535534}
+  - {x: -0.03535534, y: 0.93, z: 0.03535534}
+  - {x: -0.003535534, y: 0.93, z: 0.003535534}
+  - {x: -0.003535534, y: -0.93, z: 0.003535534}
+  - {x: -0.03535534, y: -0.93, z: 0.03535534}
+  - {x: -0.03535534, y: 0.93, z: 0.03535534}
+  - {x: -0.003535534, y: 0.93, z: 0.003535534}
+  - {x: -0.003535534, y: -0.93, z: 0.003535534}
+  - {x: -0.0050000004, y: -0.93, z: -4.371139e-10}
+  - {x: -0.05, y: -0.93, z: -0.000000004371139}
+  - {x: -0.05, y: 0.93, z: -0.000000004371139}
+  - {x: -0.0050000004, y: 0.93, z: -4.371139e-10}
+  - {x: -0.05, y: -0.93, z: -0.000000004371139}
+  - {x: -0.05, y: 0.93, z: -0.000000004371139}
+  - {x: -0.0050000004, y: 0.93, z: -4.371139e-10}
+  - {x: -0.0050000004, y: -0.93, z: -4.371139e-10}
+  - {x: -0.05, y: -0.93, z: -0.000000004371139}
+  - {x: -0.05, y: 0.93, z: -0.000000004371139}
+  - {x: -0.0050000004, y: 0.93, z: -4.371139e-10}
+  - {x: -0.0050000004, y: -0.93, z: -4.371139e-10}
+  - {x: -0.0035355333, y: -0.93, z: -0.0035355345}
+  - {x: -0.035355333, y: -0.93, z: -0.035355344}
+  - {x: -0.035355333, y: 0.93, z: -0.035355344}
+  - {x: -0.0035355333, y: 0.93, z: -0.0035355345}
+  - {x: -0.035355333, y: -0.93, z: -0.035355344}
+  - {x: -0.035355333, y: 0.93, z: -0.035355344}
+  - {x: -0.0035355333, y: 0.93, z: -0.0035355345}
+  - {x: -0.0035355333, y: -0.93, z: -0.0035355345}
+  - {x: -0.035355333, y: -0.93, z: -0.035355344}
+  - {x: -0.035355333, y: 0.93, z: -0.035355344}
+  - {x: -0.0035355333, y: 0.93, z: -0.0035355345}
+  - {x: -0.0035355333, y: -0.93, z: -0.0035355345}
+  - {x: 5.96244e-11, y: -0.93, z: -0.0050000004}
+  - {x: 5.9624405e-10, y: -0.93, z: -0.05}
+  - {x: 5.9624405e-10, y: 0.93, z: -0.05}
+  - {x: 5.96244e-11, y: 0.93, z: -0.0050000004}
+  - {x: 5.9624405e-10, y: -0.93, z: -0.05}
+  - {x: 5.9624405e-10, y: 0.93, z: -0.05}
+  - {x: 5.96244e-11, y: 0.93, z: -0.0050000004}
+  - {x: 5.96244e-11, y: -0.93, z: -0.0050000004}
+  - {x: 5.9624405e-10, y: -0.93, z: -0.05}
+  - {x: 5.9624405e-10, y: 0.93, z: -0.05}
+  - {x: 5.96244e-11, y: 0.93, z: -0.0050000004}
+  - {x: 5.96244e-11, y: -0.93, z: -0.0050000004}
+  - {x: 0.0035355352, y: -0.93, z: -0.0035355329}
+  - {x: 0.035355352, y: -0.93, z: -0.035355326}
+  - {x: 0.035355352, y: 0.93, z: -0.035355326}
+  - {x: 0.0035355352, y: 0.93, z: -0.0035355329}
+  - {x: 0.035355352, y: -0.93, z: -0.035355326}
+  - {x: 0.035355352, y: 0.93, z: -0.035355326}
+  - {x: 0.0035355352, y: 0.93, z: -0.0035355329}
+  - {x: 0.0035355352, y: -0.93, z: -0.0035355329}
+  - {x: 0.035355352, y: -0.93, z: -0.035355326}
+  - {x: 0.035355352, y: 0.93, z: -0.035355326}
+  - {x: 0.0035355352, y: 0.93, z: -0.0035355329}
+  - {x: 0.0035355352, y: -0.93, z: -0.0035355329}
+  - {x: 0.0050000004, y: -0.93, z: 8.742278e-10}
+  - {x: 0.05, y: -0.93, z: 0.000000008742278}
+  - {x: 0.05, y: 0.93, z: 0.000000008742278}
+  - {x: 0.0050000004, y: 0.93, z: 8.742278e-10}
+  - {x: 0.05, y: -0.93, z: 0.000000008742278}
+  - {x: 0.05, y: 0.93, z: 0.000000008742278}
+  - {x: 0.0050000004, y: 0.93, z: 8.742278e-10}
+  - {x: 0.0050000004, y: -0.93, z: 8.742278e-10}
   properties:
     offset: {x: 0, y: 0, z: 0}
     genTextureCoords: 1
@@ -1407,7 +1562,7 @@ MonoBehaviour:
     addCollider: 1
     width: 0.1
     depth: 0.1
-    height: 1.38
+    height: 1.86
     sides: 8
     triangleIncline: 0.5
     hollow:
@@ -1463,6 +1618,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2963461325845126180
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7328350118446575040}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1, y: 1.86, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7660356434894776634
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,6 +1651,7 @@ GameObject:
   - component: {fileID: 3456135314326489660}
   - component: {fileID: 8168190072040116118}
   - component: {fileID: 8032382475312724596}
+  - component: {fileID: 6739404649900952325}
   m_Layer: 0
   m_Name: QcBox
   m_TagString: Untagged
@@ -1604,6 +1781,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6739404649900952325
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7660356434894776634}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9086547393396270869
 GameObject:
   m_ObjectHideFlags: 0

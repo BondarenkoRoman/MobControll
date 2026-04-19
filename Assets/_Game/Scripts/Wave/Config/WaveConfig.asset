@@ -15,7 +15,4 @@ MonoBehaviour:
   enemyCount: 50
   preWaveDelay: 0.1
   afterWaveDelay: 5
-  enemySpawnInGroupInterval: 0.2
-  mobSpacing: 0.9
-  positionJitter: 0.5
-  depthScatter: 0.5
+  enemySpawnInGroupInterval: 0.01

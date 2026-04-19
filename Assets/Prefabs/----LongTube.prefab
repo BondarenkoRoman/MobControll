@@ -883,7 +883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dab7093b18b37e4fb7c367939ce6951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitPoint: {fileID: 289276151276085876}
+  exitPoint: {fileID: 0}
   outputSpline: {fileID: 0}
   respawnDelay: 2
   collisionLayer:

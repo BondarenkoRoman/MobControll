@@ -9,7 +9,6 @@ public class GameFactory : MonoBehaviour
     [SerializeField] private SplineSelector splineSelector;
     [SerializeField] private MobEntity mobPrefab;
 
-    [Header("Physics layers (имена как в Tags & Layers)")]
     [SerializeField] private string playerMobLayerName = "player";
     [SerializeField] private string enemyMobLayerName = "enemy";
     [SerializeField] private int defaultCapacity = 256;
