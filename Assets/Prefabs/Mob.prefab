@@ -141,7 +141,7 @@ MonoBehaviour:
   _follow: 1
   _startPosition: 0
   preserveUniformSpeedWithOffset: 0
-  _followSpeed: 6
+  _followSpeed: 4
   _followDuration: 1
   _speedModifier:
     blend: 1
@@ -178,6 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mobEntityConfig: {fileID: 11400000, guid: 223dec1f62eb71741b48d1b9ee0ad3d3, type: 2}
+  mover: {fileID: 5097977906454595655}
   meshRenderer: {fileID: 3046081301928911412}
 --- !u!135 &4976079247142844727
 SphereCollider:

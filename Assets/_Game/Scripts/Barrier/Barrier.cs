@@ -21,8 +21,6 @@ public class Barrier : MonoBehaviour
         _processedMobSession[mob] = session;
 
         OnTriggerMob?.Invoke();
-        if (mob.TryGetComponent<SplineMobMover>(out var mover))
-            mover.StopFollowing();
         mob.TryKill();
     }
 }

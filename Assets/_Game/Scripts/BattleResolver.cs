@@ -43,9 +43,13 @@ public class BattleResolver : MonoBehaviour
             {
                 MobEntity target = _hitBuffer[h].GetComponent<MobEntity>();
                 if (target == null || !target.IsAlive) continue;
-                bool killedAttacker = attacker.TryKill();
-                bool killedTarget   = target.TryKill();
-                if (killedAttacker) break;
+
+                // Один контакт — одна пара: повторные TryKill у атакующего уже false, но цели убивались дальше.
+                if (!attacker.TryKill())
+                    break;
+
+                target.TryKill();
+                break;
             }
         }
     }

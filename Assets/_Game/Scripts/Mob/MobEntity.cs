@@ -6,6 +6,7 @@ public enum MobTeam { Player, Enemy }
 public class MobEntity : MonoBehaviour
 {
     [SerializeField] private MobEntityConfig mobEntityConfig;
+    [SerializeField] private SplineMobMover mover;
     public MobTeam Team { get; private set; }
     public bool IsAlive { get; private set; }
 
@@ -47,7 +48,7 @@ public class MobEntity : MonoBehaviour
         _isDying = true;
         SetColor(mobEntityConfig.DeathColor);
         DieTween();
-
+        mover.StopFollowing();
         return true;
     }
 
