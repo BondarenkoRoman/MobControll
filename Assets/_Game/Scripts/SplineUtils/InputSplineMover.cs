@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Dreamteck.Splines;
 
@@ -15,7 +13,8 @@ public class InputSplineMover : SplineMover
         base.Init();
         _follower.follow = false;
         _follower.wrapMode = SplineFollower.Wrap.Default;
-        _inputPercent = _follower.GetPercent();
+        _follower.RebuildImmediate();
+        _inputPercent = _follower.spline.Project(_follower.transform.position).percent;
         _follower.SetPercent(_inputPercent);
     }
 

@@ -58,7 +58,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7847196277790336841}
@@ -83,7 +83,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 7401d5a8a986c47f29f5ed783d3db69b, type: 3}
+  - {fileID: 2100000, guid: 98129abc330621d45ae810d73ea02d5b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -300,3 +300,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameFactory: {fileID: 0}
   firePoint: {fileID: 2847591745508198019}
+  fireCooldown: 0.15

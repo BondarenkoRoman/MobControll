@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0615e065f3c9eb24f957a87533f4804b, type: 3}
-  m_Name: WaveConfig
+  m_Name: WaveConfig3
   m_EditorClassIdentifier: 
-  enemyCount: 50
+  enemyCount: 10000
   preWaveDelay: 0.1
   afterWaveDelay: 5
   enemySpawnInGroupInterval: 0.01
