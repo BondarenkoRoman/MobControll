@@ -8,12 +8,24 @@ public class GameFactory : MonoBehaviour
     public static GameFactory Instance { get; private set; }
     [SerializeField] private SplineSelector splineSelector;
     [SerializeField] private MobEntity mobPrefab;
+
+    [Header("Physics layers (имена как в Tags & Layers)")]
+    [SerializeField] private string playerMobLayerName = "player";
+    [SerializeField] private string enemyMobLayerName = "enemy";
     [SerializeField] private int defaultCapacity = 256;
     [SerializeField] private int maxSize = 512;
+
+    [SerializeField] private MobEntityConfig mobEntityConfig;
     private IObjectPool<MobEntity> _pool;
 
     public IReadOnlyList<MobEntity> PlayerMobs => _playerMobs;
+    public IReadOnlyList<MobEntity> EnemyMobs  => _enemyMobs;
+
     private readonly List<MobEntity> _playerMobs = new List<MobEntity>(500);
+    private readonly List<MobEntity> _enemyMobs  = new List<MobEntity>(500);
+
+
+    
 
     private void Awake()
     {
@@ -39,8 +51,10 @@ public class GameFactory : MonoBehaviour
     {
         var mob = _pool.Get();
         mob.transform.SetPositionAndRotation(position, rotation);
-        mob.OnSpawned(MobTeam.Enemy);// тут обьеденить
-        mob.SetColor(Color.red);
+        mob.OnSpawned(MobTeam.Enemy);
+        ApplyMobPhysicsLayer(mob, enemyMobLayerName);
+        mob.SetColor(mobEntityConfig.EnemyColor);
+        RegisterMob(mob);
 
         var mover = mob.GetComponent<SplineMobMover>();
         var spline = splineSelector.GetForEnemy();
@@ -55,13 +69,14 @@ public class GameFactory : MonoBehaviour
         var mob = _pool.Get();
         mob.transform.SetPositionAndRotation(position, rotation);    
         mob.OnSpawned(MobTeam.Player);
-        mob.SetColor(Color.cyan);
+        ApplyMobPhysicsLayer(mob, playerMobLayerName);
+        mob.SetColor(mobEntityConfig.PlayerColor);
+        RegisterMob(mob);
 
         var mover = mob.GetComponent<SplineMobMover>();
         var spline = splineSelector.GetClosestForPlayer(position);
         var sample = spline.Project(position);
         InitMoverFromSplineSample(mover, spline, sample, position);
-        // RegisterMob(mob);
         return mob;
     }
 
@@ -70,7 +85,9 @@ public class GameFactory : MonoBehaviour
         var mob = _pool.Get();
         mob.transform.SetPositionAndRotation(position, rotation);
         mob.OnSpawned(MobTeam.Player);
-        mob.SetColor(Color.cyan);
+        ApplyMobPhysicsLayer(mob, playerMobLayerName);
+        mob.SetColor(mobEntityConfig.PlayerColor);
+        RegisterMob(mob);
 
         var mover = mob.GetComponent<SplineMobMover>();
         var sample = spline.Evaluate(splinePercent);
@@ -124,11 +141,39 @@ public class GameFactory : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (Instance == this)
+            Instance = null;
         _pool?.Clear();
     }
 
+    private void RegisterMob(MobEntity mob)
+    {
+        if (mob.Team == MobTeam.Player) _playerMobs.Add(mob);
+        else                            _enemyMobs.Add(mob);
+    }
 
-    private void RegisterMob(MobEntity mob) => _playerMobs.Add(mob);
+    private void UnregisterMob(MobEntity mob)
+    {
+        _playerMobs.Remove(mob);
+        _enemyMobs.Remove(mob);
+    }
 
-    private void UnregisterMob(MobEntity mob) => _playerMobs.Remove(mob);
+    private static void ApplyMobPhysicsLayer(MobEntity mob, string layerName)
+    {
+        int layer = LayerMask.NameToLayer(layerName);
+        if (layer < 0)
+        {
+            Debug.LogWarning($"GameFactory: слой «{layerName}» не найден в Tags & Layers.");
+            return;
+        }
+
+        SetLayerRecursively(mob.transform, layer);
+    }
+
+    private static void SetLayerRecursively(Transform t, int layer)
+    {
+        t.gameObject.layer = layer;
+        for (int i = 0; i < t.childCount; i++)
+            SetLayerRecursively(t.GetChild(i), layer);
+    }
 }

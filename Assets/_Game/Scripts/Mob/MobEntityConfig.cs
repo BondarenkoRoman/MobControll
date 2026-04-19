@@ -7,4 +7,8 @@ public class MobEntityConfig : ScriptableObject
 {
     public float DieRotationDuration = 0.35f;
     public float DieMoveDownDuration = 0.35f;
+
+    public Color EnemyColor = Color.yellow;
+    public Color PlayerColor = Color.magenta;
+    public Color DeathColor = Color.gray;
 }

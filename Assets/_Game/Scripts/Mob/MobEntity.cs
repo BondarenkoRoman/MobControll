@@ -17,7 +17,7 @@ public class MobEntity : MonoBehaviour
     private bool _isDying;
 
     private MaterialPropertyBlock _mpb;
-    private static readonly int ColorID = Shader.PropertyToID("_BaseColor");
+    private static readonly int ColorID = Shader.PropertyToID("_Color");
 
     private void Awake()
     {
@@ -33,7 +33,6 @@ public class MobEntity : MonoBehaviour
         Team      = team;
         IsAlive   = true;
         _isDying  = false;
-       // CrowdManager.Instance.RegisterMob(this);
     }
 
     public void OnDespawned()
@@ -41,16 +40,16 @@ public class MobEntity : MonoBehaviour
         IsAlive  = false;
         _isDying = false;
         transform.DOKill();
-   //     CrowdManager.Instance.UnregisterMob(this);
     }
 
     public bool TryKill()
     {
+        Debug.LogError("try kill");
         if (!IsAlive || _isDying) 
             return false;
 
         _isDying = true;
-        SetColor(Color.gray);
+        SetColor(mobEntityConfig.DeathColor);
         DieTween();
 
         return true;
